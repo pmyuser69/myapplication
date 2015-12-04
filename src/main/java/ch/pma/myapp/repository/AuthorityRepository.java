@@ -1,6 +1,7 @@
 package ch.pma.myapp.repository;
 
 import ch.pma.myapp.domain.Authority;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

@@ -7,7 +7,7 @@ angular.module('myappApp')
                 parent: 'account',
                 url: '/reset/request',
                 data: {
-                    roles: []
+                    authorities: []
                 },
                 views: {
                     'content@': {

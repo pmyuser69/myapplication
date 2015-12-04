@@ -9,6 +9,6 @@ angular.module('myappApp')
                     AlertService.success(alertKey, { param : response.headers('X-myappApp-params')});
                 }
                 return response;
-            },
+            }
         };
     });

@@ -139,8 +139,8 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
         schemaObj = this.model.responses[code].schema;
         if (schemaObj && schemaObj.$ref) {
           schema = schemaObj.$ref;
-          if (schema.indexOf('#/definitions/') === 0) {
-            schema = schema.substring('#/definitions/'.length);
+          if (schema.indexOf('#/definitions/') !== -1) {
+            schema = schema.replace(/^.*#\/definitions\//, '');
           }
         }
         this.model.responseMessages.push({
@@ -674,6 +674,7 @@ SwaggerUi.Views.OperationView = Backbone.View.extend({
       $.bbq.pushState('#/', 2);
       Docs.collapseOperation(elem);
     } else {
+      event.preventDefault();
       Docs.expandOperation(elem);
     }
   },
