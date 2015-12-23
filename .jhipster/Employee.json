@@ -1,0 +1,42 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "sector",
+            "otherEntityName": "sector",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "firstName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "lastName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "birthday",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20151222151535",
+    "dto": "no",
+    "service": "no",
+    "pagination": "infinite-scroll"
+}

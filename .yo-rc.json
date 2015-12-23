@@ -8,7 +8,7 @@
     "clusteredHttpSession": "no",
     "websocket": "no",
     "databaseType": "sql",
-    "devDatabaseType": "h2Memory",
+    "devDatabaseType": "oracle",
     "prodDatabaseType": "oracle",
     "searchEngine": "elasticsearch",
     "useSass": false,

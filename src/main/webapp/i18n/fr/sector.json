@@ -1,0 +1,23 @@
+{
+    "myappApp": {
+        "sector" : {
+            "home": {
+                "title": "Sectors",
+                "createLabel": "Créer un nouveau Sector",
+                "createOrEditLabel": "Créer ou éditer un Sector"
+            },
+            "created": "Un nouveau Sector a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Sector avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Sector avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Sector {{ id }} ?"
+            },
+            "detail": {
+                "title": "Sector"
+            },
+            "name": "Name",
+            "description": "Description"
+        }
+    }
+}
+

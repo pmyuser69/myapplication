@@ -19,14 +19,14 @@ spring:
         livereload:
             enabled: false # we use Grunt + BrowserSync for livereload
     datasource:
-        driver-class-name: org.h2.jdbcx.JdbcDataSource
-        url: jdbc:h2:mem:myapp;DB_CLOSE_DELAY=-1
-        name:
-        username: 
-        password:
+        driverClassName: oracle.jdbc.pool.OracleDataSource
+        url: jdbc:oracle:thin:@localhost:1521:xe
+        username: APP
+        password: APP
+        
     jpa:
-        database-platform: ch.pma.myapp.domain.util.FixedH2Dialect
-        database: H2
+        database-platform: org.hibernate.dialect.Oracle10gDialect
+        database: ORACLE        
         show_sql: true
         properties:
             hibernate.cache.use_second_level_cache: true
@@ -43,6 +43,7 @@ spring:
                   data: target/elasticsearch/data
     mail:
         host: localhost
+        port: 1025
     messages:
         cache-seconds: 1
     thymeleaf:

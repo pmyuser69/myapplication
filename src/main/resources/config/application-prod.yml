@@ -20,9 +20,9 @@ spring:
             enabled: false
     datasource:
         driver-class-name: oracle.jdbc.pool.OracleDataSource
-        url: jdbc:oracle:thin:@localhost:1521:myapp
-        name:
-        password:
+        url: jdbc:oracle:thin:@localhost:1521:xe
+        name: APP
+        password: APP
     jpa:
         database-platform: org.hibernate.dialect.Oracle10gDialect
         database: ORACLE
