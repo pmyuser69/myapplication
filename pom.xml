@@ -225,9 +225,9 @@
             <version>${javax.inject.version}</version>
         </dependency>
         <dependency>
-            <groupId>oracle</groupId>
-            <artifactId>ojdbc</artifactId>
-            <version>7</version>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc7</artifactId>
+            <version>12.1.0.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
@@ -355,6 +355,10 @@
     </dependencies>
 
     <repositories>
+        <repository>
+            <id>nexus</id>
+            <url>http://localhost:8081/nexus/content/groups/public</url>
+        </repository>
         <repository>
             <id>spring-milestones</id>
             <url>http://repo.spring.io/milestone</url>
