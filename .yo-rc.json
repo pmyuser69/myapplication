@@ -8,18 +8,19 @@
     "clusteredHttpSession": "no",
     "websocket": "no",
     "databaseType": "sql",
-    "devDatabaseType": "oracle",
-    "prodDatabaseType": "oracle",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
     "searchEngine": "elasticsearch",
     "useSass": false,
     "buildTool": "maven",
     "frontendBuilder": "grunt",
-    "javaVersion": "8",
     "enableTranslation": true,
-    "rememberMeKey": "d0c65bf07cb24148f98fb91662a32048cb19f17b",
     "enableSocialSignIn": false,
+    "rememberMeKey": "f5e76d084efc62a11f70fa2c589b221fafcdcf87",
     "testFrameworks": [
-      "gatling"
+      "gatling",
+      "cucumber",
+      "protractor"
     ]
   }
 }

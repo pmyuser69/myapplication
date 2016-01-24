@@ -130,7 +130,7 @@ public class EmployeeResource {
      * SEARCH  /_search/employees/:query -> search for the employee corresponding
      * to the query.
      */
-    @RequestMapping(value = "/_search/employees/{query}",
+    @RequestMapping(value = "/_search/employees/{query:.+}",
         method = RequestMethod.GET,
         produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed

@@ -50,7 +50,7 @@ jhipster:
     security:
         rememberme:
             # security key (this key should be unique for your application, and kept secret)
-            key: d0c65bf07cb24148f98fb91662a32048cb19f17b
+            key: f5e76d084efc62a11f70fa2c589b221fafcdcf87
     swagger:
         title: myapp API
         description: myapp API documentation

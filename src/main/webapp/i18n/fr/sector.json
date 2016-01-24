@@ -4,7 +4,8 @@
             "home": {
                 "title": "Sectors",
                 "createLabel": "Créer un nouveau Sector",
-                "createOrEditLabel": "Créer ou éditer un Sector"
+                "createOrEditLabel": "Créer ou éditer un Sector",
+                "search": "Search for Sector"
             },
             "created": "Un nouveau Sector a été créé avec l'identifiant {{ param }}",
             "updated": "Le Sector avec l'identifiant {{ param }} a été mis à jour",

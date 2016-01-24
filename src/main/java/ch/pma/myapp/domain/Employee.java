@@ -29,15 +29,15 @@ public class Employee implements Serializable {
     @Size(max = 50)
     @Column(name = "first_name", length = 50, nullable = false)
     private String firstName;
-
+    
     @NotNull
     @Size(max = 50)
     @Column(name = "last_name", length = 50, nullable = false)
     private String lastName;
-
+    
     @Column(name = "birthday")
     private LocalDate birthday;
-
+    
     @ManyToOne
     @JoinColumn(name = "sector_id")
     private Sector sector;
@@ -53,7 +53,7 @@ public class Employee implements Serializable {
     public String getFirstName() {
         return firstName;
     }
-
+    
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -61,7 +61,7 @@ public class Employee implements Serializable {
     public String getLastName() {
         return lastName;
     }
-
+    
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -69,7 +69,7 @@ public class Employee implements Serializable {
     public LocalDate getBirthday() {
         return birthday;
     }
-
+    
     public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
@@ -91,6 +91,9 @@ public class Employee implements Serializable {
             return false;
         }
         Employee employee = (Employee) o;
+        if(employee.id == null || id == null) {
+            return false;
+        }
         return Objects.equals(id, employee.id);
     }
 

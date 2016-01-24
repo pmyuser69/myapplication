@@ -25,10 +25,10 @@ public class Sector implements Serializable {
     @NotNull
     @Column(name = "name", nullable = false)
     private String name;
-
+    
     @Column(name = "description")
     private String description;
-
+    
     public Long getId() {
         return id;
     }
@@ -40,7 +40,7 @@ public class Sector implements Serializable {
     public String getName() {
         return name;
     }
-
+    
     public void setName(String name) {
         this.name = name;
     }
@@ -48,7 +48,7 @@ public class Sector implements Serializable {
     public String getDescription() {
         return description;
     }
-
+    
     public void setDescription(String description) {
         this.description = description;
     }
@@ -62,6 +62,9 @@ public class Sector implements Serializable {
             return false;
         }
         Sector sector = (Sector) o;
+        if(sector.id == null || id == null) {
+            return false;
+        }
         return Objects.equals(id, sector.id);
     }
 

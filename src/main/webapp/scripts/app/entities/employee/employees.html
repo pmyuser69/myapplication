@@ -1,27 +1,33 @@
 <div>
     <h2 translate="myappApp.employee.home.title">Employees</h2>
     <jh-alert></jh-alert>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
-                <button class="btn btn-primary" ui-sref="employee.new">
-                    <span class="glyphicon glyphicon-flash"></span> <span translate="myappApp.employee.home.createLabel">Create a new Employee</span>
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="employee.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                        translate="myappApp.employee.home.createLabel">Create new Employee
+                    </span>
                 </button>
             </div>
-            <div class="col-md-8">
+            <div class="col-xs-8 no-padding-right">
                 <form name="searchForm" class="form-inline">
-                    <div class="form-group">
-                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="query">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'myappApp.employee.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
                     </div>
-                    <button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span> <span>Search a Employee</span>
-                    </button>
                 </form>
             </div>
         </div>
     </div>
-
+    <br/>
     <div class="table-responsive">
-        <table class="table table-striped">
+        <table class="jh-table table table-striped">
             <thead>
                 <tr jh-sort="predicate" ascending="reverse" callback="reset()">
                     <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
@@ -41,22 +47,27 @@
                     <td>
                         <a ui-sref="sector.detail({id:employee.sector.id})">{{employee.sector.name}}</a>
                     </td>
-                    <td>
-                        <button type="submit"
-                                ui-sref="employee.detail({id:employee.id})"
-                                class="btn btn-info btn-sm">
-                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
-                        </button>
-                        <button type="submit"
-                                ui-sref="employee.edit({id:employee.id})"
-                                class="btn btn-primary btn-sm">
-                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
-                        </button>
-                        <button type="submit"
-                                ui-sref="employee.delete({id:employee.id})"
-                                class="btn btn-danger btn-sm">
-                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
-                        </button>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="employee.detail({id:employee.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="employee.edit({id:employee.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="employee.delete({id:employee.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
                     </td>
                 </tr>
             </tbody>

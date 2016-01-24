@@ -1,9 +1,0 @@
-jhipster-prod-elasticsearch:
-  container_name: myapp-prod-elasticsearch
-  image: elasticsearch:1.7.3
-  # volumes:
-  # - ~/volumes/jhipster/myapp/prod-elasticsearch/:/usr/share/elasticsearch/data/
-  ports:
-  - "9200:9200"
-  - "9300:9300"
-

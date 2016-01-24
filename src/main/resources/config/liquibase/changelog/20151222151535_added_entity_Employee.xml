@@ -24,11 +24,15 @@
             <column name="first_name" type="varchar(50)">
                 <constraints nullable="false" />
             </column>
+            
             <column name="last_name" type="varchar(50)">
                 <constraints nullable="false" />
             </column>
+            
             <column name="birthday" type="date"/>
+            
             <column name="sector_id" type="bigint"/>
+            <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
         </createTable>
         
         <addForeignKeyConstraint baseColumnNames="sector_id"

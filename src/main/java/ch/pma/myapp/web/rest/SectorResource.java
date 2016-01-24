@@ -130,7 +130,7 @@ public class SectorResource {
      * SEARCH  /_search/sectors/:query -> search for the sector corresponding
      * to the query.
      */
-    @RequestMapping(value = "/_search/sectors/{query}",
+    @RequestMapping(value = "/_search/sectors/{query:.+}",
         method = RequestMethod.GET,
         produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed

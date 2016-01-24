@@ -1,0 +1,18 @@
+myapp-elasticsearch:
+  container_name: myapp-elasticsearch
+  image: elasticsearch:1.7.3
+  # volumes:
+  #   - ~/volumes/jhipster/myapp/elasticsearch/:/usr/share/elasticsearch/data/
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+myapp-postgresql:
+  container_name: myapp-postgresql
+  image: postgres:9.4.5
+  # volumes:
+  #   - ~/volumes/jhipster/myapp/postgresql/:/var/lib/postgresql/
+  environment:
+    - POSTGRES_USER=myapp
+    - POSTGRES_PASSWORD=
+  ports:
+    - "5432:5432"
